@@ -1,0 +1,308 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    background-color: #333;
+    color: white;
+    padding: 10px 20px; /* Reduce padding */
+    height: 60px; /* Adjust height */
+    display: flex;
+    flex-wrap: wrap; /* Allows items to adjust on small screens */
+    align-items: center; /* Aligns items properly */
+    justify-content: space-between; /* Keeps spacing even */
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers items when stacked */
+}
+
+.navbar li {
+    margin: 5px 10px; /* Decrease margin to make it smaller */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px; /* Makes text smaller for mobile */
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Add margin to body so content doesn’t get hidden under navbar */
+body {
+    padding-top: 70px; /* Adjust based on navbar height */
+}
+
+.logo {
+    width: 50px; /* Adjust size */
+    height: 50px; /* Make it square */
+    border-radius: 50%; /* Makes it round */
+    object-fit: cover; /* Prevents distortion */
+    border: 2px solid #000; /* Optional border */
+}
+
+.welcome-section {
+    padding: 20px;
+}
+
+/* Carousel Container */
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.carousel .prev, 
+.carousel .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10;
+    width: 50px;  /* Adjust button width */
+    height: 50px; /* Adjust button height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+/* Move the left arrow to the left */
+.carousel .prev {
+    left: 20px;
+}
+
+/* Move the right arrow to the right */
+.carousel .next {
+    right: 20px;
+}
+
+/* Slide Images */
+.slides img {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+.slides img.active {
+    display: block;
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* mentors */
+#mentors {
+    scroll-margin-top: 80px; /* Adjust this to match your navbar height */
+}
+
+.mentors {
+    background: #f8f8f8;
+    padding: 20px;
+}
+
+.mentor-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.mentor-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+/* Vision and Mission*/
+#vision-mission {
+    scroll-margin-top: 80px; /* Adjust based on your navbar height */
+}
+
+.vision-mission-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.vision-mission-section h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.vision, .mission {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.vision h3, .mission h3 {
+    font-size: 22px;
+    color: #444;
+}
+
+.mission ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+#message-us {
+    scroll-margin-top: 80px; /* Adjust based on navbar height */
+}
+
+.message-us {
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+}
+
+input, textarea {
+    margin: 5px 0;
+    padding: 5px;
+}
+
+.message-box {
+    margin-top: 20px;
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+.message-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+}
+
+.message-form, .message-display {
+    width: 48%; /* Each section takes almost half the space */
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.message-display {
+    min-height: 200px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #007BFF;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.gender-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column; /* Stacks items vertically */
+        text-align: center;
+        padding: 10px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar li {
+        margin: 5px 0;
+    }
+
+    .navbar a {
+        font-size: 16px;
+    }
+}
+
+.carousel img {
+    width: 100%;  /* Makes images fit the screen */
+    height: auto;  /* Keeps the aspect ratio */
+}
+
+@media (max-width: 768px) {
+    .message-us {
+        flex-direction: column;
+    }
+
+    .mentor-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.signature {
+    text-align: right;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: white;
+    background-color: #333; /* Optional: Matches navbar color */
+}
+
